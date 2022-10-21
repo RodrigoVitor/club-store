@@ -27,18 +27,6 @@ export const LinkDiv = styled.div`
     }
 `
 
-export const Main = styled.div`
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding:0px 25px;
-
-    @media screen and (max-width:430px) {
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        padding:0px;
-    }
-`
 
 export const Footer = styled.footer`
     padding:25px 0 10px 0;

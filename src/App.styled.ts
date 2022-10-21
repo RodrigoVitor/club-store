@@ -12,14 +12,18 @@ export const Header  = styled.header`
 export const Title = styled.h1`
     color: #454ADE;
 `
-export const Link = styled.a`
-    color: #DFF3E3;
-    margin-right:15px;
-    cursor:pointer;
+export const LinkDiv = styled.div`
+    a {
+        color: #DFF3E3;
+        margin-right:15px;
+        cursor:pointer;
+        text-decoration:none;
+        transition: all ease 1s;
 
-    &:hover {
-        color:#ccc;
-        text-decoration:underline
+        &:hover {
+            color:#ccc;
+            text-decoration:underline
+        }
     }
 `
 

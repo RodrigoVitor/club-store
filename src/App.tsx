@@ -1,16 +1,19 @@
 import * as C from './App.styled'
 import { Teams } from './components/teams'
 import { Bayer, Barcelona, Corinthians, Flamengo, Palmeiras, River } from './hooks/teamsHook'
+import { Router } from './routes/Router'
+import { Link } from 'react-router-dom'
 
 function App () {
   return (
     <C.Container>
+      <Router />
       <C.Header>
         <C.Title>ClubStore </C.Title>
-        <div>
-          <C.Link>Home</C.Link>
-          <C.Link>Meu Carrinho</C.Link>
-        </div>
+        <C.LinkDiv>
+          <Link to="/">Home</Link>
+          <Link to="/meu-carrinho">Meu Carrinho</Link>
+        </C.LinkDiv>
       </C.Header>
       <C.Main>
         <Teams img={Bayer.img} price={Bayer.price} team={Bayer.team} />

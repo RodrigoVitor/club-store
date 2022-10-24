@@ -8,21 +8,21 @@ export type CartType = {
 
 export const cartInitialState: CartType[] = [
     {
-        name: 'Corinthians',
-        price: 250,
-        id: '0',
-    },
-    {
-        name: 'Flamengo',
-        price: 170,
-        id: '1',
+        name: '',
+        price: 0,
+        id: '',
     }
 ]
 
 export function cartReducer (state: CartType[], action: ReducerActionType) {
     switch (action.type) {
         case 'ADD':
-            return state
+            let name = action.payload.name 
+            let price = action.payload.price
+            let id = action.payload.id
+            let newCart = [...state]
+            newCart.push({name,price, id})
+            return newCart
         break
 
         case 'DEL': 

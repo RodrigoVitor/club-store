@@ -2,6 +2,7 @@ import { Teams } from '../../components/teams'
 import * as C from './App.styled'
 import { Bayer, Barcelona, Corinthians, Flamengo, Palmeiras, River } from '../../hooks/teamsHook'
 
+
 export function Home () {
     return (
         <C.Container>

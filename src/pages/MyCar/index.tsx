@@ -5,16 +5,24 @@ import { Context } from '../../contexts/Context'
 
 export function MyCar () {
     const {state, dispatch} = useContext(Context)
-    console.log(state.cart[0])
     return (
         <C.Container>
-            {state.cart.map(cart => (
-                <C.Box key={cart.id}>
-                    <C.Title>Camiseta do {cart.name}</C.Title>
-                    <C.Price> R$ {cart.price}</C.Price>
-                    <a href="#"><Trash size={25} /></a>
-                </C.Box>
-            ))}
+            {state.cart.length < 2 && 
+                <>
+                    <p>Carrinho vazio</p>
+                </>
+            }
+            {state.cart.length > 2 && 
+                <>              
+                    {state.cart.map((cart, index) => (
+                        <C.Box key={index}>
+                            <C.Title>Camiseta do {cart.name}</C.Title>
+                            <C.Price> R$ {cart.price}</C.Price>
+                            <a href="#"><Trash size={25} /></a>
+                        </C.Box>
+                    ))}
+                </>
+            }
         </C.Container>
     )
 }

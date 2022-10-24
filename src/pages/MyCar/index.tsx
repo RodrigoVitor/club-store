@@ -5,49 +5,16 @@ import { Context } from '../../contexts/Context'
 
 export function MyCar () {
     const {state, dispatch} = useContext(Context)
+    console.log(state.cart[0])
     return (
         <C.Container>
-            <C.Box>
-                <C.Title>Camiseta do {state.cart.name}</C.Title>
-                <C.Price> R$ {state.cart.price}</C.Price>
-                <a href="#"><Trash size={25} /></a>
-            </C.Box>
-            <C.Box>
-                <C.Title>Camiseta de Time</C.Title>
-                <C.Price> R$ 0,00</C.Price>
-                <a href="#"><Trash size={25} /></a>
-            </C.Box>
-            <C.Box>
-                <C.Title>Camiseta de Time</C.Title>
-                <C.Price> R$ 0,00</C.Price>
-                <a href="#"><Trash size={25} /></a>
-            </C.Box>
-            <C.Box>
-                <C.Title>Camiseta de Time</C.Title>
-                <C.Price> R$ 0,00</C.Price>
-                <a href="#"><Trash size={25} /></a>
-            </C.Box>
-            <C.Box>
-                <C.Title>Camiseta de Time</C.Title>
-                <C.Price> R$ 0,00</C.Price>
-                <a href="#"><Trash size={25} /></a>
-            </C.Box>
-            <C.Box>
-                <C.Title>Camiseta de Time</C.Title>
-                <C.Price> R$ 0,00</C.Price>
-                <a href="#"><Trash size={25} /></a>
-            </C.Box>
-            <C.Box>
-                <C.Title>Camiseta de Time</C.Title>
-                <C.Price> R$ 0,00</C.Price>
-                <a href="#"><Trash size={25} /></a>
-            </C.Box>
-            <C.Box>
-                <C.Title>Camiseta de Time</C.Title>
-                <C.Price> R$ 0,00</C.Price>
-                <a href="#"><Trash size={25} /></a>
-                
-            </C.Box>
+            {state.cart.map(cart => (
+                <C.Box key={cart.id}>
+                    <C.Title>Camiseta do {cart.name}</C.Title>
+                    <C.Price> R$ {cart.price}</C.Price>
+                    <a href="#"><Trash size={25} /></a>
+                </C.Box>
+            ))}
         </C.Container>
     )
 }

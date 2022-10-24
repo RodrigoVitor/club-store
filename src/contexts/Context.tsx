@@ -3,7 +3,7 @@ import { CartType, cartInitialState, cartReducer } from '../reducers/cartReducer
 import { ReducerActionType } from '../types/ReducerActionType'
 
 type InitialStateType = {
-    cart: CartType
+    cart: CartType[]
 }
 type ContextType = {
     state: InitialStateType,

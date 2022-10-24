@@ -6,13 +6,20 @@ export type CartType = {
     id: string
 }
 
-export const cartInitialState: CartType = {
-    name: 'Corinthians',
-    price: 250,
-    id: '0',
-}
+export const cartInitialState: CartType[] = [
+    {
+        name: 'Corinthians',
+        price: 250,
+        id: '0',
+    },
+    {
+        name: 'Flamengo',
+        price: 170,
+        id: '1',
+    }
+]
 
-export function cartReducer (state: CartType, action: ReducerActionType) {
+export function cartReducer (state: CartType[], action: ReducerActionType) {
     switch (action.type) {
         case 'ADD':
             return state

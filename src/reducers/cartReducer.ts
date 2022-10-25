@@ -19,11 +19,16 @@ export function cartReducer (state: CartType[], action: ReducerActionType) {
             let newCart = [...state]
             newCart.push({name,price, id})
             return newCart
-        break
+        
 
         case 'DEL': 
             let newArray = state.filter(cart => cart.id !== action.payload.id)
             return newArray
+            
+        case 'DEL_ALL':
+            let newArrayCart = [...state]
+            newArrayCart = []
+            return newArrayCart
     }
 
     return state

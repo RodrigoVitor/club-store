@@ -14,6 +14,30 @@ export function MyCar () {
             }
         })
     }
+
+    function FINISHED_CART () {
+        let allCart: number[] = [];
+        let total: number = 0;
+
+        state.cart.map(cart => {
+            allCart.push(Number(cart.price))
+        })
+        allCart.map(cart => (
+            total += cart
+        ))
+        
+        alert(`Sua compra deu um total de R$ ${total}`)
+        DEL_ALL_CART()
+
+    }
+
+    function DEL_ALL_CART () {
+        dispatch({
+            type: 'DEL_ALL',
+            payload: {}
+        })
+    }
+
     return (
         <C.Container>
             {state.cart.length < 1 && 
@@ -32,6 +56,12 @@ export function MyCar () {
                     ))}
                 </>
             }
+            {state.cart.length >= 1 && 
+                <>
+                    <C.Button onClick={FINISHED_CART}>Finalizar Compra</C.Button>
+                </>
+            }
+
         </C.Container>
     )
 }

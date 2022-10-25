@@ -7,12 +7,12 @@ export function MyCar () {
     const {state, dispatch} = useContext(Context)
     return (
         <C.Container>
-            {state.cart.length < 2 && 
+            {state.cart.length < 1 && 
                 <>
-                    <p>Carrinho vazio</p>
+                    <C.Info>Carrinho vazio</C.Info>
                 </>
             }
-            {state.cart.length > 2 && 
+            {state.cart.length >= 1 && 
                 <>              
                     {state.cart.map((cart, index) => (
                         <C.Box key={index}>

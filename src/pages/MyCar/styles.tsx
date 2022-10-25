@@ -5,6 +5,14 @@ export const Container = styled.div`
     min-height:60vh
 `
 
+export const Info = styled.p`
+    text-align:center;
+    padding: 70px 0 0 0;
+    font-size:1.6rem;
+    color: #DFF3E3
+    
+`
+
 export const Box = styled.div`
     display:flex;
     align-items:center;

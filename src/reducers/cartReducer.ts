@@ -1,17 +1,13 @@
 import { ReducerActionType } from "../types/ReducerActionType"
 
 export type CartType = {
-    name: string,
-    price: number
-    id: string
+    name?: string,
+    price?: number
+    id?: string
 }
 
 export const cartInitialState: CartType[] = [
-    {
-        name: '',
-        price: 0,
-        id: '',
-    }
+    
 ]
 
 export function cartReducer (state: CartType[], action: ReducerActionType) {

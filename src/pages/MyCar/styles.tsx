@@ -35,3 +35,20 @@ export const Box = styled.div`
 export const Title = styled.p``
 
 export const Price = styled.span``
+
+export const Button = styled.button`
+    display:block;
+    margin:auto;
+    padding:14px;
+    border-radius:10px;
+    border:none;
+    background-color:#454ADE;
+    color: #DFF3E3;
+    font-size:1rem;
+    cursor:pointer;
+    transition: all ease .8s;
+
+    &:hover {
+        background-color:#565BEF;
+    }
+`

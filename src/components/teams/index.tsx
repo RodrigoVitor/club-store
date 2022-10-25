@@ -10,6 +10,7 @@ type TeamProp = {
 
 export function Teams ({img, price, team}: TeamProp) {
     const {state, dispatch} = useContext(Context)
+    const id = Math.floor(Math.random() * 1000000).toString()
 
     function ADD_CART () {
         dispatch({
@@ -17,7 +18,7 @@ export function Teams ({img, price, team}: TeamProp) {
             payload: {
                 name: team,
                 price: price,
-                id: team + '24k'
+                id: id
             }
         })
     }

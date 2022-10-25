@@ -5,6 +5,15 @@ import { Context } from '../../contexts/Context'
 
 export function MyCar () {
     const {state, dispatch} = useContext(Context)
+
+    function DEL_CART (id: string | undefined) {
+        dispatch({
+            type: 'DEL',
+            payload: {
+                id: id
+            }
+        })
+    }
     return (
         <C.Container>
             {state.cart.length < 1 && 
@@ -18,7 +27,7 @@ export function MyCar () {
                         <C.Box key={index}>
                             <C.Title>Camiseta do {cart.name}</C.Title>
                             <C.Price> R$ {cart.price}</C.Price>
-                            <a href="#"><Trash size={25} /></a>
+                            <a href="#"><Trash size={25} onClick={() => DEL_CART(cart.id)} /></a>
                         </C.Box>
                     ))}
                 </>

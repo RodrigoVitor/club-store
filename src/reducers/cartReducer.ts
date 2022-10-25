@@ -22,7 +22,8 @@ export function cartReducer (state: CartType[], action: ReducerActionType) {
         break
 
         case 'DEL': 
-            return state
+            let newArray = state.filter(cart => cart.id !== action.payload.id)
+            return newArray
     }
 
     return state

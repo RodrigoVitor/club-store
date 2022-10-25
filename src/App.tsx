@@ -6,7 +6,9 @@ function App () {
   return (
     <C.Container>
       <C.Header>
-        <C.Title>ClubStore </C.Title>
+        <C.Title>
+          <Link to="/">ClubStore</Link>  
+        </C.Title>
         <C.LinkDiv>
           <Link to="/">Home</Link>
           <Link to="/meu-carrinho">Meu Carrinho</Link>
@@ -14,7 +16,9 @@ function App () {
       </C.Header>
       <Router />
       <C.Footer>
-        <p>ClubStore</p>
+        <p>
+          <Link to="/" onClick={() => window.scrollTo(0,0)}>ClubStore</Link>  
+        </p>
         <span>Made <a href="#">Rodrigo Vitor</a></span>
       </C.Footer>
     </C.Container>

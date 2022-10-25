@@ -21,6 +21,8 @@ export function Teams ({img, price, team}: TeamProp) {
                 id: id
             }
         })
+
+        alert(`Camisa do ${team} adicionado com sucesso`)
     }
 
     return (

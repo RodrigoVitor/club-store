@@ -10,7 +10,10 @@ export const Header  = styled.header`
 `
 
 export const Title = styled.h1`
-    color: #454ADE;
+    a {
+        color: #454ADE;
+        text-decoration:none
+    }
 `
 export const LinkDiv = styled.div`
     a {
@@ -37,6 +40,10 @@ export const Footer = styled.footer`
         color:#454ADE;
         font-size: 25px;;
         text-align:center
+    }
+    p a {
+        color: #454ADE;
+        text-decoration:none
     }
 
     span {

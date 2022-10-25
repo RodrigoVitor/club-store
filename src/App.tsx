@@ -1,6 +1,7 @@
 import * as C from './App.styled'
 import { Router } from './routes/Router'
 import { Link } from 'react-router-dom'
+import { Scroll } from './components/scroll'
 
 function App () {
   return (
@@ -21,6 +22,7 @@ function App () {
         </p>
         <span>Made <a href="#">Rodrigo Vitor</a></span>
       </C.Footer>
+      <Scroll />
     </C.Container>
   )
 }
